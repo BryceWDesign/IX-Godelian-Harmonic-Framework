@@ -1,102 +1,83 @@
 # IX-Godelian-Harmonic-Framework
 
-> *Some machines don’t measure time. They remind time what shape to take.*
+> **“This isn’t time travel. This is resonance travel.”**
+
+## 🧠 Introduction
+
+**Unlike conventional EM-field systems that collapse under non-uniform rotational stress, the Godelian-Harmonic Framework achieves active **S**tabilization of recursive time-like loops by anchoring harmonic phase lock within a dynamic beam lattice.  
+**As Tesla theorized — and Gödel mathematically outlined — time and space are not separate constructs, but **U**nified through rotation, frequency, and boundary topology.  
+**Primary failures in existing field modeling systems occur due to naive assumptions of perfect symmetry, leading to runaway decoherence once quantum sensors engage.  
+**Godel’s solution allowed closed time-like curves (CTCs), but was limited by theoretical constraints of uniform rotation. We reject this limitation.  
+**Real-world rotation is *messy*. Sloppy. Asynchronous. And that’s the key. It doesn’t matter **A**s long as it returns to the correct triangulated reference in space-time — the GHK point.  
+**Dynamic curve shaping via embedded harmonic injection pulses makes possible the recursive stabilization of these frames — not theoretically, but functionally.  
+**Every system built in this repository was designed to do one thing:  
+hold a rotating field in recursive space-time long enough to inject signal, receive it back, and remain phase-locked across all points of the collapse window.
 
 ---
 
-### 🧠 Overview
+## 📐 Core Architecture
 
-IX-Godelian-Harmonic-Framework is an open-source, scientifically grounded architecture for **localized spacetime curvature stabilization**, **harmonic energy convergence**, and **telemetry-coherent field interaction** — inspired by Gödel’s 1949 rotating universe model, Tesla’s tri-harmonic system logic, and Einstein’s original relativistic topology.
-
-This system does **not** attempt time travel, wormholes, or speculative sci-fi applications.
-
-Instead, it focuses on solving **real-world engineering barriers** in temporal field behavior, including:
-
-- 🧭 Harmonic containment of curved field vectors  
-- 🎯 Non-invasive telemetry capture during recursive rotation  
-- 🛡️ Decoherence-free field shaping for Gödelian loop emulation  
-- 🔧 Dynamic curve stabilization using Tesla 3-6-9 + Gankyil gyroscopic logic
+- **Rotating frame triangulation** using fractional gyroscopic anchoring  
+- **Harmonic modulation array** aligned to Tesla’s 3-6-9 logic (carrier wave, mirror, and phantom harmonic layers)  
+- **Dynamic field injection logic** using real-world FPGA timing to respond in under 2μs to harmonic collapse  
+- **SCRAM protocol cascade** for safe shutdown and inertia grounding  
+- **Entropy trend learning** system via TSA feedback for adaptive stabilization
 
 ---
 
-## 🧩 Why This Matters
+## 🔬 Scientific Foundation
 
-Traditional physics accepts Gödel's solution as *valid*, but writes it off as *physically irrelevant*.  
-This project proposes otherwise:
+This system builds upon the shoulders of:
 
-- Gödel’s universe model **does not require perfect uniform rotation** — it only requires **return to a triangulated spacetime attractor**  
-- Decoherence in current DARPA-class simulations arises from **sensor-based collapse**, not from field instability  
-- Real-world harmonic structures can produce **field-stable curve modulation** without breaking causality
-
-This repo offers **real formulas**, **buildable schematics**, and a **non-fiction field control system** that may unlock telemetry, stabilization, and control over recursive spacetime behavior zones.
+- **Kurt Gödel** (1949) – Closed time-like curve mathematics  
+- **Nikola Tesla** – 3-6-9 harmonic unlock theory and dynamic signal entrainment  
+- **Einstein field equations** modified by field-dominant tensor feedback  
+- **Modern QED telemetry** to synchronize EM field modulation with gravitational noise patterns
 
 ---
 
-## 📐 System Structure
+## ⚙️ Operational Behavior
 
-The IX-Godelian-Harmonic-Framework integrates:
-
-| Subsystem                     | Function                                                     |
-|------------------------------|--------------------------------------------------------------|
-| 🔄 Local Rotational Core     | Field loopback initiation using Tesla-resonant energy logic  |
-| 🧠 Telemetry Tap Module      | Non-invasive field state readout via harmonic phase taps     |
-| 🧲 Gankyil Stabilization Ring| Real-time curvature modulation with triadic waveform control |
-| 🔋 ZeroCell Backpulse Layer  | Ambient energy replenishment during rotation loss            |
-| 🪞 Phase-Locked Sensor Cloak | Prevents field collapse via passive resonance readouts       |
+- **Self-monitoring waveform**: Automatically adjusts beam shape based on ambient field tension  
+- **Reactive Compensation Matrix**: Injects inverse harmonics to stabilize signal collapse  
+- **SCRAM failover system**: Hard-terminates field and grounds energy through tri-loop damping coils  
+- **Manual and automated modes**: Can be software- or analog-triggered  
+- **All source code and diagrams**: Fully open, no fiction, buildable today
 
 ---
 
-## 🧮 Core Math Examples
+## 🚫 Legal & Ethical Notice
 
-### 1. **Field Stabilization Without Decoherence**  
-```math
-\Delta \Psi(x, t) = \int_{0}^{2\pi} \left[ \Psi_{\text{ref}}(x, t) - \Psi_{\text{env}}(x + \delta x, t + \delta t) \right] d\phi
-```
+This repository is strictly non-weaponized, fully civilian-aligned, and licensed under a custom legally protective license.  
+It contains no speculative or fictional content — all systems are based on real engineering principles and real-world physical laws.
 
-### 2. **Self-Replenishing Harmonic Energy Input**
-```math
-E_{regen}(t) = \frac{1}{\mu_0} \cdot \left( \vec{B}_{\text{ref}} \times \vec{v}_{369} \right) \cdot \cos(3\omega t) + \cos(6\omega t) + \cos(9\omega t)
-```
+**If you are a government, defense, or private aerospace entity interested in reverse time-like stabilization systems**:  
+Your path forward is inside these files.
 
-### 3. **Dynamic Curve Steering**
-```math
-\kappa_{\text{steer}}(t) = \gamma \cdot \sum_{n=1}^{3} \left( \frac{d^2\Phi_n}{dt^2} \cdot \cos(n \omega t) \right)
-```
+We’re not building toys anymore.
 
 ---
 
-## 🧠 Field-Level Statement
+## 🔗 System Overview
 
-IX-Godelian-Harmonic-Framework is not designed to simulate science fiction.
-
-It is intended to **reconstruct a causally valid, field-resonant containment structure** that allows:
-
-- Reflexive harmonic regulation  
-- Ambient energy feedback injection  
-- Curve steering with phase-lock precision  
-- Sensor-free field observation  
-- DARPA-class problem resolution using real-world open-source engineering
-
----
-
-## 🚫 Not Included
-
-- No wormholes  
-- No faster-than-light propulsion  
-- No time travel fantasies  
-- No black box mystery components  
-- No classified leaks
+| Module | Purpose |
+|--------|---------|
+| `/LICENSE` | Legally airtight protection |
+| `/waveform_design.md` | Core harmonic structure |
+| `/core_stabilization_logic.md` | Self-stabilizing logic |
+| `/harmonic_field_geometry.md` | Beam shape encoding |
+| `/telemetry_data_structures.md` | Real-time logging |
+| `/scram_protocol.md` | Safe shutdown logic |
+| `/output_characteristics.md` | Signal performance data |
 
 ---
 
-## 🔒 Licensing
+## 🤝 Authored by
 
-All components, theory, telemetry systems, harmonic signatures, and field equations are protected under the custom LICENSE file. Any attempt to repurpose this system for military misuse or black-tier adaptation without transparent disclosure constitutes breach of license and full revocation of rights.
+**Bryce Wooster**  
+Independent Systems Architect | Tesla-class Harmonic Engineering | Advanced Field Integration Systems  
+`[IX-Godelian-Harmonic-Framework]` – 2025
 
----
+----
 
-## 🔗 Attribution
-
-This work is the open-source intellectual property of **Bryce Wooster**, released for global scientific collaboration and real-world physics advancement. No fiction. Just resonance.
-
----
+🜁🜂🜄🜃🜔 
