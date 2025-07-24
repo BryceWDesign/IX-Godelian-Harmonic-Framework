@@ -1,75 +1,74 @@
-# Telemetry Scope Array – Real-Time Curvature Mapping & Field Diagnostics
+# Telemetry Scope Array – Harmonic Field Monitoring & Real-Time Data Logging
 
-## 🧭 Purpose
+## 📡 Purpose
 
-The **Telemetry Scope Array (TSA)** provides direct feedback on the emitted harmonic field, allowing the system to:
+The **Telemetry Scope Array (TSA)** captures and logs all relevant beam behavior and environmental interactions:
 
-- Visualize curvature field behavior in real-time  
-- Detect phase anomalies and directional misalignment  
-- Calibrate output against environmental interference  
-- Provide feedback to T1, GVC, and projection lens subsystems
+- Phase stability  
+- Beam coherence  
+- Curvature drift  
+- Field-to-matter interaction  
+- Environmental distortion
 
----
-
-## 🔬 Sensor Grid Composition
-
-- **Array Shape:** Hemispherical shell (φ: 0–180°, θ: 0–360°)  
-- **Sensor Count:** 512–2048 (depending on resolution tier)  
-- **Sampling Rate:** 5–20 kHz per node  
-- **Types:**  
-  - Quantum Hall effect sensors (for flux curvature)  
-  - Micro-thermoelectric differentials (for phase energy gradients)  
-  - LIDAR rings (for real-world distance mapping)  
-  - Aura-field IR overlays (experimental)
+This is the system’s **eye and memory**.
 
 ---
 
-## 🔁 Feedback Loop
+## 🧠 Sensor Grid Architecture
 
-1. **Capture beam vector F_out(t)** at all array nodes  
-2. **Map amplitude, phase, vector angle at each node**  
-3. **Construct 3D curvature field map in real time**  
-4. **Detect anomalies (phase drift, echo reflections, harmonics)**  
-5. **Trigger corrections via T1 or re-map GVC phase input**
+### 1. **Sensor Types**
 
----
-
-## 📊 Data Outputs
-
-- Field Curvature Map (Φ-space)  
-- Phase Delay Graphs  
-- Amplitude Constellation Plots  
-- Vector Trajectory History (3D polar)  
-- Noise Spectrum Overlay
+| Sensor Type         | Purpose                          | Resolution         |
+|---------------------|----------------------------------|--------------------|
+| Phase Array Pads    | Detect Φ(t) in local space       | 0.02 ms temporal   |
+| Coherence Scanners  | Measure wavefront uniformity     | 97% optical band   |
+| Vector Drift Cams   | Log direction deviation          | ±0.5° angular res  |
+| Field Dampers       | Sense environmental absorption   | <0.8 dB accuracy   |
 
 ---
 
-## ⚠️ Anomaly Triggers
+### 2. **Temporal Sampling Rate**
 
-| Condition                       | Response                                 |
-|----------------------------------|------------------------------------------|
-| Phase skew > 15°                | Trigger T1 phase rebias                  |
-| Vector drift > 2.5°             | Re-align GVC harmonics                   |
-| Amplitude jitter > 3σ           | Switch to pulsed mode / re-average input|
-| Unexpected field loop feedback  | Log and suspend firing (safety fault)   |
-
----
-
-## 🔐 Calibration Modes
-
-- **Auto-Zeroing**: Nulls baseline curvature when beam inactive  
-- **Sweep Scan**: Projects test beam and logs delta vs expected  
-- **Echo Mode**: Sends back-scatter pulses to test medium interaction
+- Default: **4.8 MHz internal loop**  
+- Fast-path telemetry triggered on:
+  - ΔΦ(t) exceeding thresholds  
+  - Lens mode transitions  
+  - Anomaly logbook events
 
 ---
 
-## 🧬 Integration
+## 🔃 Feedback Loops
 
-- Reads output from `/field_projection_lens.md`  
-- Sends correction vectors to `/gyroscopic_feedback_t1.md`  
-- Reports anomalies to `/signal_collapse_recovery.md`  
-- Informs `/dynamic_resonance_mapper.md` for phase path remapping
+- Feeds phase error values to `/dynamic_resonance_mapper.md`  
+- Sends curvature warnings to `/resonant_field_reinforcement.md`  
+- Updates beam shape in `/output_characteristics.md`  
+- Alerts `/signal_collapse_recovery.md` upon cascade risk
 
 ---
 
-## 🔗 Next File: `/signal_collapse_recovery.md` – Response system for field disruption, collapse events, and harmonic recovery
+## 📦 Output Format
+
+```
+{
+  "timestamp": "2025-07-24T19:22:54.002Z",
+  "phase_delta": 0.27 rad,
+  "beam_coherence": 93.1,
+  "curvature_shift": 0.8°,
+  "environmental_dampening": 1.12 dB
+}
+```
+
+- All values are streamed over isolated diagnostic bus  
+- Can be logged locally or remotely (shielded fiber uplink)
+
+---
+
+## 🧬 Notes
+
+- TSA data is critical for recursive stability loops  
+- Beam behavior graphs can be generated using `/drift_log_visualizer.md`  
+- Can trigger hard shutdown if ΔΦ spike exceeds 1.5 rad in <10 ms
+
+---
+
+## 🔗 Next File: `/signal_collapse_recovery.md` – Emergency response logic for rapid field contraction and anomaly shielding
