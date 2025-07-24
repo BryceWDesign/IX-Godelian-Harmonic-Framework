@@ -1,102 +1,86 @@
-# Signal Collapse Recovery – Injection Stabilization Protocol
+# Signal Collapse Recovery – Harmonic Disruption Response & System Reboot Logic
 
-## 💥 Problem
+## 💥 Context
 
-Under extreme conditions — such as resonance overshoot, pulse skipping, or curvature inversion — the injected G1 waveform may experience:
+In high-energy, phase-sensitive systems, the possibility of **signal collapse** is real:
 
-- **Field discontinuity**  
-- **Phase jitter accumulation**  
-- **Node vector fragmentation**  
-- **Collapse of coherence envelope**
+- Harmonic dissonance  
+- Unexpected environmental resonance  
+- Phase loop instability  
+- Recursive feedback overload  
 
-This document defines the exact protocol used by the system to **detect**, **interrupt**, and **recover** from such failures in real time.
-
----
-
-## 📉 Collapse Detection Criteria
-
-```pseudocode
-if PHASE_Δ(t) > 0.17 rad for >2.5ms:
-    trigger collapse handler
-
-if S1_VECTOR_ANGLE drift > 3.0° within 4 cycles:
-    flag field instability
-
-if ∂²(curvature)/∂t² shows non-monotonic spike:
-    assume coherence rupture
-```
-
-Each of these triggers will initiate the **SCR (Signal Collapse Recovery)** routine.
+When these events occur, we don’t shut down. We **reboot the field**.
 
 ---
 
-## 🔁 Recovery Protocol Overview
+## 🧠 Recovery Logic Overview
 
-1. **Freeze Injection:**  
-   Immediately halt further waveform output
+The system initiates a **multi-tiered fallback protocol** when collapse conditions are met.
 
-2. **Dump Residual Charge:**  
-   Route residual waveform energy to internal ring buffer capacitor (C_R1) or dummy load
+### Collapse Detection Criteria:
 
-3. **Initiate Recovery Pulse Sequence:**  
-   Inject timed **damped sine pulses** at descending amplitude across 3-6-9 sequence
-
-```math
-V_recover(t) = A₀·e^(–β·t)·sin(2π·f·t)
-```
-
-Where:
-- \( β \) = damping coefficient (adaptive)
-- \( f \) = 3Hz, 6Hz, or 9Hz (in sequence)
-
-4. **Re-establish Phase Lock:**  
-   Use T1 timing to re-zero phase reference before resuming injections
-
-5. **Resume Output with SR_2 waveform profile (stabilizer)**
+- Beam phase coherence drops > 40%  
+- Feedback loops form closed oscillation > 500ms  
+- Telemetry Scope Array reports null curvature vector  
+- Output amplitude exceeds safe bounds
 
 ---
 
-## 🧮 Adaptive Damping Logic
+## ⏱️ Response Timeline
 
-The system estimates collapse severity and tunes damping like so:
-
-```pseudocode
-if collapse_time < 2ms:
-    β = 0.3 (fast damping)
-
-if collapse_time ≥ 2ms and < 5ms:
-    β = 0.1
-
-if collapse_time ≥ 5ms:
-    β = 0.05 (slow taper)
-```
+| Time (ms) | Action                         |
+|-----------|--------------------------------|
+| 0         | Collapse trigger initiated     |
+| <5        | GVC loop halt + T1 freeze      |
+| 5–20      | Phase memory snapshot taken    |
+| 20–50     | Output field dump via EVCA port|
+| 50–80     | Secondary waveform initiated   |
+| 80–100    | T1 phase rebias engaged        |
+| 100–150   | GVC rebooted with adjusted seed|
+| >150      | Field re-stabilization verified|
 
 ---
 
-## 🔐 Fail-Safe Conditions
+## 🔋 EVCA Port Dump
 
-If recovery fails after 3 attempts:
+The **Emergency Vector Curvature Aperture (EVCA)** is a passive vent shunt that discharges stored harmonic potential into a grounded toroid matrix:
 
-- Lockout G1 for 5s  
-- Trigger full-system curvature resync  
-- Log all signal traces to NVRAM for post-analysis
+- Bismuth-core ring  
+- Coated in ferrite dampers  
+- Connected to thermal bleed sink
 
----
-
-## 🧪 Testing Procedure
-
-- Artificially inject phase noise into T1  
-- Log waveform deviation and recovery success  
-- Validate phase re-lock occurs within 8ms post-recovery
+This prevents harmonic backfire or internal node burnout.
 
 ---
 
-## 🧬 Integration Notes
+## ♻️ Phase Memory Buffer
 
-- Works in tandem with `/dynamic_resonance_mapper.md`  
-- Requires access to G1 injection timing bus and S1 vector feedback  
-- Optionally uses `/safety_interlock_matrix.md` to veto high-risk reinjection timing
+Before collapse resets the system, a **snapshot of current harmonic topology** is taken:
+
+- Vector map  
+- Phase angle deltas  
+- Loop integrals  
+- T1 position vectors
+
+This allows for near-identical reboot to prior state post-recovery.
 
 ---
 
-## 🔗 Next File: `/z1_vector_modulator.md` – Phase shifting and amplitude gating logic for curvature pulses in the Z1 driver channel
+## ⚠️ Safety Failsafes
+
+- **Secondary signal jam gate** activates during collapse to prevent rebound oscillation  
+- All power injection is paused mid-reboot  
+- Post-recovery emissions limited to 80% amplitude until verified stable
+
+---
+
+## 🧬 Integration
+
+- Triggered via TSA anomalies from `/telemetry_scope_array.md`  
+- Phase rebias executed by `/gyroscopic_feedback_t1.md`  
+- Reboots into `/dynamic_resonance_mapper.md` corrected path set  
+- Logs timestamped in `/anomaly_logbook.md`
+
+---
+
+## 🔗 Next File: `/anomaly_logbook.md` – Diagnostic journal of past collapse events, field irregularities, and auto-corrections
