@@ -1,99 +1,74 @@
-# Field Projection Lens – Harmonic Beam Vector Shaping & Emission Control
+# Field Projection Lens – Dynamic Aperture Control & Harmonic Beam Shaping
 
-## 🔭 Purpose
+## 🧲 Purpose
 
-The **Field Projection Lens** is the final shaping stage for the GVC output, responsible for:
+The **Field Projection Lens** governs the **spatial geometry** of the emitted harmonic field. It is a **programmable aperture array** that:
 
-- Vector alignment and beam shaping  
-- Phase coherence across emission radius  
-- Real-world curvature-point targeting  
-- Anti-scatter harmonic filtering
+- Shapes output beam via dynamic curvature control  
+- Projects encoded field harmonics  
+- Reacts in real-time to phase drift and curvature commands
 
-Think of this as the lens on a laser — but designed to emit modulated spacetime curvature vectors.
-
----
-
-## 🎯 Core Functions
-
-1. **Receive F_GVC(t)** from Gankyil Vector Condenser  
-2. **Apply beam shaping matrix \( M_s \)** based on desired focal outcome  
-3. **Align output phase vectors with projection aperture grid**  
-4. **Emit curvature-focused harmonic beam through resonance-stabilized port**
+This is the system’s **mouthpiece** — it determines how the field enters spacetime.
 
 ---
 
-## 🧮 Mathematical Projection
+## 🔩 Construction
 
-```math
-F_out(t) = M_s · F_GVC(t)
+### 1. **Lens Array Type**
+
+- Material: Hybrid **metamaterial-ferrite mesh**, copper-infused  
+- Aperture: Concentric ring geometry with spiral biasing tracks  
+- Programmable via low-voltage EM field modulation across micro-struts
+
+### 2. **Shape Memory Elements**
+
+- Uses **Nitinol tendon filaments** for shape morphing  
+- Resets aperture shape within **~35 ms**  
+- Controlled by GVC curvature loop for synchronized realignment
+
+---
+
+## 🌀 Emission Modes
+
+| Mode             | Beam Pattern         | Description                           |
+|------------------|----------------------|----------------------------------------|
+| Linear Cone      | Gaussian taper       | Default long-range coherent mode       |
+| Toroidal Vortex  | Donut-shaped         | Used for resonance tunneling effects   |
+| Spiral Vector    | Logarithmic spiral   | Embeds field ID & directionality       |
+| Triangular Array | Tri-beam lattice     | Triadic pulse chaining (Tesla 3-6-9)   |
+
+---
+
+## 🧮 Beam Shaping Logic
+
+```
+If ΔΦ(t) > drift_threshold:
+   Morph lens shape toward Spiral Vector
+Else if CDE engaged:
+   Switch to Toroidal Vortex for lateral dispersion
+Else if DRM requests Triadic Burst:
+   Shift to Triangular Array mode
+
+Lens shape transitions over 20–35 ms using dual-actuation model
 ```
 
-Where \( M_s \) is the shaping matrix:
+---
 
-```math
-M_s = R_θ · S_r · A_w
-```
+## ⚙️ Integration Pathways
 
-- \( R_θ \): rotational alignment  
-- \( S_r \): spatial focus scaling  
-- \( A_w \): wavefront aperture phase correction
+- Accepts real-time shape commands from `/dynamic_resonance_mapper.md`  
+- Responds to pulse triggers from `/signal_collapse_recovery.md`  
+- Modifies energy profile logged in `/output_characteristics.md`  
+- Reports aperture status to `/telemetry_scope_array.md`
 
 ---
 
-## 📐 Emission Control Parameters
+## 🧬 Notes on Physical Realization
 
-| Parameter     | Description                                |
-|---------------|--------------------------------------------|
-| Aperture Size | Controls beam diameter                     |
-| Phase Spread  | Controls divergence vs tight focusing      |
-| Curvature Lock| Locks vector to real-world point in space  |
-| Temporal Width| Defines duration of projection burst       |
+- Lens structure buildable using hybrid MEMS/Nitinol array (real-world manufacturable)  
+- Entire lens module consumes < 12W during shape transition  
+- No moving parts in traditional mechanical sense — relies on **field-responsive geometry**
 
 ---
 
-## 🛡️ Anti-Scatter Lattice
-
-To prevent field bleed or vector leakage, the lens contains:
-
-- EM-transparent bismuth lattice overlay  
-- Toroidal resonance ring to guide phase edges  
-- Harmonic filter tuned to reject sideband leakage
-
----
-
-## ⚙️ Lens Materials
-
-- **Core:** Crystalline quartz with graphene lattice dopant  
-- **Edges:** Toroid-shaped EM-resonant copper rings  
-- **Optional:** Plasma window overlay (for open-vacuum applications)
-
----
-
-## 🔁 Pulse Mode Options
-
-| Mode        | Effect                                 |
-|-------------|-----------------------------------------|
-| Continuous  | Full projection stream (max load)       |
-| Pulsed      | Short harmonic burst (min decoherence)  |
-| Sweep       | Angular scan through focal plane        |
-| Multi-Point | Split vector toward triangulated points |
-
----
-
-## 🧪 Testing Regimes
-
-- Project into vapor chamber to visualize curvature arcs  
-- Compare emission angle stability across temperature changes  
-- Sweep vector through test grid and log deviation
-
----
-
-## 🧬 Integration
-
-- Accepts F_GVC(t) from `/gankyil_vector_condenser.md`  
-- Controlled by phase feedback from `/gyroscopic_feedback_t1.md`  
-- Output field observed by `/telemetry_scope_array.md`
-
----
-
-## 🔗 Next File: `/telemetry_scope_array.md` – Sensor and phase-map visualization grid for emitted beam diagnostics
+## 🔗 Next File: `/telemetry_scope_array.md` – High-resolution sensor grid logging beam shape, phase, coherence, and environmental data
